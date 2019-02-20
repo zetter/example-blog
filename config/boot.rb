@@ -1,3 +1,7 @@
+RubyVM::InstructionSequence.compile_option = {
+  peephole_optimization: false
+}
+
 ENV['BUNDLE_GEMFILE'] ||= File.expand_path('../Gemfile', __dir__)
 require 'csv'
 
