@@ -41,7 +41,7 @@ class RailsTracer
 
   def trace(tp)
     begin
-      puts  [get_thread_no, tp.lineno, tp.path, tp.defined_class.to_s, tp.binding.try(:receiver).try(:class).try(:to_s), tp.method_id, tp.event, get_line(tp.path, tp.lineno)].to_csv
+      puts  [get_thread_no, tp.lineno, tp.path, tp.defined_class.to_s, tp.method_id, tp.event, get_line(tp.path, tp.lineno)].to_csv
     rescue => e
       puts e.inspect
       puts 'ERROR!!!'
